@@ -1,0 +1,71 @@
+{
+  "info": {
+    "name": "UserVaultApi",
+    "description": "CRUD requests for the UserVaultApi. Import this into Postman, then run the API (dotnet run) before sending requests.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:5236/api/users"
+    },
+    {
+      "key": "userId",
+      "value": "1"
+    }
+  ],
+  "item": [
+    {
+      "name": "Get All Users",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}"
+      }
+    },
+    {
+      "name": "Get User By Id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/{{userId}}"
+      }
+    },
+    {
+      "name": "Create User",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Grace Hopper\",\n  \"email\": \"grace@example.com\",\n  \"password\": \"compiler99\"\n}"
+        },
+        "url": "{{baseUrl}}"
+      }
+    },
+    {
+      "name": "Update User",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Grace Hopper Updated\",\n  \"email\": \"grace.updated@example.com\",\n  \"password\": \"newpassword\"\n}"
+        },
+        "url": "{{baseUrl}}/{{userId}}"
+      }
+    },
+    {
+      "name": "Delete User",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": "{{baseUrl}}/{{userId}}"
+      }
+    }
+  ]
+}

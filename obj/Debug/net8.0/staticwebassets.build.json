@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Q2KI2sPXpcbOyP3zmpG5KeIM10umKmmRLkZ7hM01THU=",
+  "Source": "UserVaultApi",
+  "BasePath": "_content/UserVaultApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
